@@ -3,7 +3,6 @@ from pathlib import Path
 
 from checkov.runner_filter import RunnerFilter
 from checkov.terraform.checks.resource.yandexcloud.EC2PublicIP import check
-
 from checkov.terraform.runner import Runner
 
 
