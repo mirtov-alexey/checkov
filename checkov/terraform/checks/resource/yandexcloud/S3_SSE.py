@@ -1,6 +1,6 @@
 from checkov.terraform.checks.resource.base_resource_value_check import BaseResourceValueCheck
 from checkov.common.models.enums import CheckCategories
-
+from checkov.common.models.consts import ANY_VALUE
 
 class S3_SSE(BaseResourceValueCheck):
 
@@ -14,4 +14,7 @@ class S3_SSE(BaseResourceValueCheck):
     def get_inspected_key(self):
         return "server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/kms_master_key_id"
 
+    def get_expected_value(self):
+        return ANY_VALUE
+    
 check = S3_SSE()

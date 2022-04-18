@@ -21,6 +21,7 @@ resource "yandex_storage_bucket" "pass" {
 resource "yandex_storage_bucket" "fail" {
   bucket = "mybucket"
 
+  
 
 }
 
